@@ -46,14 +46,18 @@ public enum DeviceModel: CaseIterable {
     case iPhone15Pro, iPhone15ProMax
     case iPhone16, iPhone16Plus
     case iPhone16Pro, iPhone16ProMax
+    case iPhone16e
 
     case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen, iPadSeventhGen, iPadEighthGen, iPadNinthGen, iPadTenthGen
+    case iPadA16
 
     case iPadAir, iPadAir2, iPadAir3, iPadAir4, iPadAir5
     
     case iPadAir11InchM2, iPadAir13InchM2
+    case iPadAir11InchM3, iPadAir13InchM3
 
     case iPadMini, iPadMini2, iPadMini3, iPadMini4, iPadMini5, iPadMini6
+    case iPadMiniA17Pro
 
     case iPadPro9_7Inch, iPadPro10_5Inch, iPadPro12_9Inch, iPadPro12_9Inch_SecondGen
     
@@ -184,6 +188,8 @@ extension DeviceModel {
         case (17, 2):           return .iPhone16ProMax
         case (17, 3):           return .iPhone16
         case (17, 4):           return .iPhone16Plus
+            
+        case (17, 5):           return .iPhone16e
         
         default:                return .unknown
         }
@@ -212,21 +218,26 @@ extension DeviceModel {
         case (11, 6), (11, 7):                return .iPadEighthGen
         case (12, 1), (12, 2):                return .iPadNinthGen                
         case (13, 18), (13, 19):              return .iPadTenthGen
+        case (15, 7), (15, 8):                return .iPadA16
+            
         case (4, 1), (4, 2), (4, 3):          return .iPadAir
         case (5, 3), (5, 4):                  return .iPadAir2
         case (11, 3), (11, 4):                return .iPadAir3
         case (13, 1), (13, 2):                return .iPadAir4
         case (13, 16), (13, 17):              return .iPadAir5
-        case (14, 8), (14, 9):
-                                              return .iPadAir11InchM2
-        case (14, 10), (14, 11):
-                                              return .iPadAir13InchM2
+        case (14, 8), (14, 9):                return .iPadAir11InchM2
+        case (14, 10), (14, 11):              return .iPadAir13InchM2
+        case (15, 3), (15, 4):                return .iPadAir11InchM3
+        case (15, 5), (15, 6):                return .iPadAir13InchM3
+            
         case (2, 5), (2, 6), (2, 7):          return .iPadMini
         case (4, 4), (4, 5), (4, 6):          return .iPadMini2
         case (4, 7), (4, 8), (4, 9):          return .iPadMini3
         case (5, 1), (5, 2):                  return .iPadMini4
         case (11, 1), (11, 2):                return .iPadMini5
         case (14, 1), (14, 2):                return .iPadMini6
+        case (16, 1), (16, 2):                return .iPadMiniA17Pro
+            
         case (6, 3), (6, 4):                  return .iPadPro9_7Inch
         case (7, 3), (7, 4):                  return .iPadPro10_5Inch
         case (8, 1), (8, 2), (8, 3), (8, 4):  return .iPadPro11Inch
@@ -314,7 +325,6 @@ extension DeviceModel {
 extension DeviceModel {
     public var hasNotch: Bool {
         switch self {
-
         case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR:
             return true
         case .iPhone11, .iPhone11Pro, .iPhone11ProMax:
@@ -325,7 +335,8 @@ extension DeviceModel {
             return true
         case .iPhone14, .iPhone14Plus:
             return true
-            
+        case .iPhone16e:
+            return true
         default:
           return false
         }
