@@ -189,7 +189,9 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 15 Pro"
         case (16, 2):
             return "iPhone 15 Pro Max"
-            
+        
+        case (17, 5):
+            return "iPhone 16e"
         case (17, 3):
             return "iPhone 16"
         case (17, 4):
@@ -525,3 +527,4 @@ extension Identifier: CustomStringConvertible {
         }
     }
 }
+
