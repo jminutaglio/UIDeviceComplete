@@ -200,6 +200,15 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 16 Pro"
         case (17, 2):
             return "iPhone 16 Pro Max"
+
+        case (18, 3):
+            return "iPhone 17"
+        case (18, 4):
+            return "iPhone Air"
+        case (18, 1):
+            return "iPhone 17 Pro"
+        case (18, 2):
+            return "iPhone 17 Pro Max"
             
             
         default:
