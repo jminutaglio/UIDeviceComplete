@@ -128,19 +128,21 @@ extension Screen {
         case (1, 2), (2, 4), (2, 7), (3, 2), (3, 4):        return .medium(mm: 42)
             
         case (4, 1), (4, 3), (5, 1), (5, 3), (5, 9),
-             (5, 11), (6, 1), (6, 3), (6, 10), (6, 12):     return .small(mm: 40)
+             (5, 11), (6, 1), (6, 3), (6, 10), (6, 12),
+             (7, 13), (7, 15):                              return .small(mm: 40)
         case (4, 2), (4, 4), (5, 2), (5, 4), (5, 10),
-             (5, 12), (6, 2), (6, 4), (6, 11), (6, 13):     return .medium(mm: 44)
+             (5, 12), (6, 2), (6, 4), (6, 11), (6, 13),
+             (7, 14), (7, 16):                              return .medium(mm: 44)
             
         case (6, 6), (6, 8), (6, 14), (6, 16),
              (7, 1), (7, 3):                                return .small(mm: 41)
         case (6, 7), (6, 9), (6, 15), (6, 17),
              (7, 2), (7, 4):                                return .medium(mm: 45)
             
-        case (6, 18), (7, 5):                               return .ultra(mm: 49)
+        case (6, 18), (7, 5), (7, 12):                      return .ultra(mm: 49)
             
-        case (7, 8), (7, 10):                               return .small(mm: 42)
-        case (7, 9), (7, 11):                               return .medium(mm: 46)
+        case (7, 8), (7, 10), (7, 17), (7, 19):             return .small(mm: 42)
+        case (7, 9), (7, 11), (7, 18), (7, 20):             return .medium(mm: 46)
             
         default:                                            return nil
         }
