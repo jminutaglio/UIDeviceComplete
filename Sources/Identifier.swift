@@ -201,6 +201,15 @@ extension Identifier: CustomStringConvertible {
         
         case (17, 5):
             return "iPhone 16e"
+        
+        case (18, 3):
+            return "iPhone 17"
+        case (18, 4):
+            return "iPhone Air"
+        case (18, 1):
+            return "iPhone 17 Pro"
+        case (18, 2):
+            return "iPhone 17 Pro Max"
             
         default:
             return "unknown"
