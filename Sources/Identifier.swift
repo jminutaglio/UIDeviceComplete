@@ -198,7 +198,18 @@ extension Identifier: CustomStringConvertible {
             return "iPhone 16 Pro"
         case (17, 2):
             return "iPhone 16 Pro Max"
-            
+        
+        case (17, 5):
+            return "iPhone 16e"
+        
+        case (18, 3):
+            return "iPhone 17"
+        case (18, 4):
+            return "iPhone Air"
+        case (18, 1):
+            return "iPhone 17 Pro"
+        case (18, 2):
+            return "iPhone 17 Pro Max"
             
         default:
             return "unknown"
@@ -417,6 +428,27 @@ extension Identifier: CustomStringConvertible {
         case (16, 6):
             return "iPad Pro M4 (13 inch, Wi-Fi+5G)"
             
+        case (16, 1):
+            return "iPad mini (A17 Pro, Wi-Fi)"
+        case (16, 2):
+            return "iPad mini (A17 Pro, Wi-Fi+5G)"
+            
+        case (15, 7):
+            return "iPad (A16, Wi-Fi)"
+        case (15, 8):
+            return "iPad (A16, Wi-Fi+5G)"
+            
+        case (15, 3):
+            return "iPad Air M3 (11 inch, Wi-Fi)"
+        case (15, 4):
+            return "iPad Air M3 (11 inch, Wi-Fi+5G)"
+        case (15, 6):
+            return "iPad Air M3 (13 inch, Wi-Fi)"
+        case (15, 7):
+            return "iPad Air M3 (13 inch, Wi-Fi+5G)"
+            
+
+            
         default:
             return "unknown"
         }
@@ -520,6 +552,24 @@ extension Identifier: CustomStringConvertible {
             return "Apple Watch Series 10, 42mm case (GPS + Cellular)"
         case (7, 11):
             return "Apple Watch Series 10, 46mm case (GPS + Cellular)"
+        case (7, 12):
+            return "Apple Watch Ultra 3"
+        case (7, 13):
+            return "Apple Watch SE 3, 40mm case (GPS)"
+        case (7, 14):
+            return "Apple Watch SE 3, 44mm case (GPS)"
+        case (7, 15):
+            return "Apple Watch SE 3, 40mm case (GPS + Cellular)"
+        case (7, 16):
+            return "Apple Watch SE 3, 44mm case (GPS + Cellular)"
+        case (7, 17):
+            return "Apple Watch Series 11, 42mm case (GPS)"
+        case (7, 18):
+            return "Apple Watch Series 11, 46mm case (GPS)"
+        case (7, 19):
+            return "Apple Watch Series 11, 42mm case (GPS + Cellular)"
+        case (7, 20):
+            return "Apple Watch Series 11, 46mm case (GPS + Cellular)"
         default:
             return "unknown"
         }
