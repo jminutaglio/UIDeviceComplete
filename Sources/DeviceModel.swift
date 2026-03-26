@@ -94,6 +94,9 @@ public enum DeviceModel: CaseIterable {
     case series9
     case ultra2
     case series10
+    case series11
+    case ultra3
+    case se3
     #endif
     
     case unknown
@@ -322,6 +325,9 @@ extension DeviceModel {
         case (7, 1), (7, 2), (7, 3), (7, 4):        return .series9
         case (7, 5):                                return .ultra2
         case (7, 8), (7, 9), (7, 10), (7, 11):      return .series10
+        case (7, 17), (7, 18), (7, 19), (7, 20):    return .series11
+        case (7, 12):                               return .ultra3
+        case (7, 13), (7, 14), (7, 15), (7, 16):    return .se3
         default:                                    return .unknown
         }
     }
@@ -334,7 +340,6 @@ extension DeviceModel {
 extension DeviceModel {
     public var hasNotch: Bool {
         switch self {
-
         case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR:
             return true
         case .iPhone11, .iPhone11Pro, .iPhone11ProMax:
