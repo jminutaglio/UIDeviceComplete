@@ -48,6 +48,7 @@ public enum DeviceModel: CaseIterable {
     case iPhone16, iPhone16Plus
     case iPhone16Pro, iPhone16ProMax
     case iPhone17
+    case iPhone17e
     case iPhone17Pro, iPhone17ProMax
     case iPhoneAir
 
@@ -197,6 +198,7 @@ extension DeviceModel {
         case (18, 1):           return .iPhone17Pro
         case (18, 2):           return .iPhone17ProMax
         case (18, 4):           return .iPhoneAir
+        case (18, 5):           return .iPhone17e
         
         default:                return .unknown
         }
@@ -344,6 +346,8 @@ extension DeviceModel {
         case .iPhone14, .iPhone14Plus:
             return true
         case .iPhone16e:
+            return true
+        case .iPhone17e:
             return true
             
         default:
