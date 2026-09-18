@@ -266,6 +266,18 @@ class DeviceModelTests: XCTestCase {
         let deviceModel = DeviceModel(identifier: Identifier("iPhone17,5"))
         XCTAssert(deviceModel == .iPhone16e, "DeviceModel - .iPhone16e is failing")
     }
+
+    func testDeviceModelIPhone18Pro() {
+        let deviceModel = DeviceModel(identifier: Identifier("iPhone19,2"))
+        XCTAssert(deviceModel == .iPhone18Pro, "DeviceModel - .iPhone18Pro is failing")
+    }
+
+    func testDeviceModelIPhone18ProMax() {
+        let deviceModel1 = DeviceModel(identifier: Identifier("iPhone19,3"))
+        let deviceModel2 = DeviceModel(identifier: Identifier("iPhone19,7"))
+        XCTAssert(deviceModel1 == .iPhone18ProMax, "DeviceModel - .iPhone18ProMax is failing")
+        XCTAssert(deviceModel2 == .iPhone18ProMax, "DeviceModel - .iPhone18ProMax is failing")
+    }
     
     // MARK: - iPad Device Model tests
     
@@ -552,7 +564,8 @@ class DeviceModelTests: XCTestCase {
         let withModels: [DeviceModel] = [.iPhone14Pro, .iPhone14ProMax,
                                          .iPhone15, .iPhone15Plus, .iPhone15Pro, .iPhone15ProMax,
                                          .iPhone16, .iPhone16Plus, .iPhone16Pro, .iPhone16ProMax,
-                                         .iPhoneAir, .iPhone17, .iPhone17Pro, .iPhone17ProMax]
+                                         .iPhoneAir, .iPhone17, .iPhone17Pro, .iPhone17ProMax,
+                                         .iPhone18Pro, .iPhone18ProMax]
 
         let withoutModels: [DeviceModel] = DeviceModel.allCases.filter( { !withModels.contains($0) })
 

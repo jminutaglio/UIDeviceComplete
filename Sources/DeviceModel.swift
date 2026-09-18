@@ -51,6 +51,7 @@ public enum DeviceModel: CaseIterable {
     case iPhone17e
     case iPhone17Pro, iPhone17ProMax
     case iPhoneAir
+    case iPhone18Pro, iPhone18ProMax
 
     case iPadFirstGen, iPadSecondGen, iPadThirdGen, iPadFourthGen, iPadFifthGen, iPadSixthGen, iPadSeventhGen, iPadEighthGen, iPadNinthGen, iPadTenthGen
     case iPadA16
@@ -202,6 +203,9 @@ extension DeviceModel {
         case (18, 2):           return .iPhone17ProMax
         case (18, 4):           return .iPhoneAir
         case (18, 5):           return .iPhone17e
+
+        case (19, 2):           return .iPhone18Pro
+        case (19, 3), (19, 7):  return .iPhone18ProMax
         
         default:                return .unknown
         }
@@ -369,6 +373,8 @@ extension DeviceModel {
         case .iPhone16, .iPhone16Plus, .iPhone16Pro, .iPhone16ProMax:
             return true
         case .iPhoneAir, .iPhone17, .iPhone17Pro, .iPhone17ProMax:
+            return true
+        case .iPhone18Pro, .iPhone18ProMax:
             return true
         default:
           return false
